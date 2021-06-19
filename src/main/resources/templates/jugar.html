@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>Por favor ingrese su número</h1>
+    <form action="/jugar" method="post">
+        <input name="num"/>
+        <input type="submit" value="Enviar"/>
+        <input type="submit" value="Reiniciar" name="reiniciar"/>
+    </form>
+
+    <p th:text = "${getNumRandom} + ' Número de la maquina'"/>
+    <p th:text = "${famas} + ' Número de famas'"/>
+    <p th:text = "${picas} + ' Número de picas'"/>
+    <p th:each = "lista :${lista}">
+        <span th:text = "${valor}"></span>
+    </p>
+</div>
+</body>
+</html>
